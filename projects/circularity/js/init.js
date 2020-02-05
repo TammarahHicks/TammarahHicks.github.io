@@ -20,10 +20,9 @@ var init = function (window) {
         ////////////////////////////////////////////////////////////
         
         // TODO 1 : Declare and initialize our variables
-        // variable to hold a single circle when creating circles / iterating
         var circle;
         var circles = [];
-        
+
 
         // TODO 2 : Create a function that draws a circle 
         function drawCircle () {
@@ -41,11 +40,14 @@ var init = function (window) {
         drawCircle();
         drawCircle();*/
         
-        for (var i = 0; i <-100; i++ ){
+        for (var i = 0; i <=100; i++ ){
             drawCircle();
         }
 
-        
+       
+
+
+
         ////////////////////////////////////////////////////////////
         ///////////////// PROGRAM LOGIC ////////////////////////////
         ////////////////////////////////////////////////////////////
@@ -57,7 +59,7 @@ var init = function (window) {
         */
         function update() {
             // TODO 4 : Update the circle's position //
-            /*physikz.updatePosition(circles[0]);
+            physikz.updatePosition(circles[0]);
 	        physikz.updatePosition(circles[1]);
 	        physikz.updatePosition(circles[2]);
 	        physikz.updatePosition(circles[3]);
@@ -69,14 +71,12 @@ var init = function (window) {
            game.checkCirclePosition(circles[1]);
            game.checkCirclePosition(circles[2]);
            game.checkCirclePosition(circles[3]);
-           game.checkCirclePosition(circles[4]);*/
+           game.checkCirclePosition(circles[4]);
 
-            // TODO 8 : Iterate over the arrayfor (var i = 0; i < circle.length; i++) {
-                var eachCircle = circles[i];
-                physikz.updatePosition(circles[i]);
-                game.checkCirclePosition(circles[i]);
-            }
+
+            // TODO 8 : Iterate over the array
            
+
             
         }
     
@@ -93,7 +93,7 @@ var init = function (window) {
             }
             
             // TODO 5 : YOUR CODE STARTS HERE //////////////////////
-       if ( circle.x < 0 ) {
+            if ( circle.x < 0 ) {
             circle.x =canvas.width;
             }
             
@@ -106,8 +106,10 @@ var init = function (window) {
             }
 
 
+
+
             // YOUR TODO 5 CODE ENDS HERE //////////////////////////
-        };
+        }
         
         /////////////////////////////////////////////////////////////
         // --- NO CODE BELOW HERE  --- DO NOT REMOVE THIS CODE --- //
@@ -122,7 +124,7 @@ var init = function (window) {
         game.update = update;
         
         app.addUpdateable(window.opspark.game);
-    };
+    }
 };
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
